@@ -92,25 +92,6 @@
 			<li><a href="about.html">About me</a></li>
 		</ul>	
 	</div>
-
-
-
-
-
-
-
-	if (ball.x < 20 || ball.x > 690) {
-		if (ball.y > p1 && ball.y < p1 + 80 && ball.speedX < 0) {
-			ball.speedX = -ball.speedX;
-			ball.speedY = (ball.y - p1 - 40) * 0.1;
-			}
-
-	if (ball.y > p2 && ball.y < p2 + 80 && ball.speedX > 0) {
-		ball.speedX = -ball.speedX;
-		ball.speedY = (ball.y - p2 - 40) * 0.1;
-		}
-	}
-	
 		<br><br><br>
 		<audio controls autoplay  loop>
 			<source src="0sound.mp3">
