@@ -41,33 +41,55 @@
             align-items: center;
         }
         .display-container{
-            background-color: rgb(195, 214, 218);
-            color: rgb(0, 116, 136);
             width: 704px;
             padding: 8px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
+
         .image-container {
             background-color: rgb(255, 255, 255);
             padding: 16px;
         }
-
+        button{
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+            border: none;
+            background-color: hsl(0, 0%, 30%);
+            color: white;
+            font-size: 3rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: hsl(0, 0%, 50%);
+        }
+        button:active {
+            background-color: hsl(0, 0%, 50%);
+        }
     </style>
 </head>
 <body>
     <div class="headline">
         <h1>Pong</h1>
     </div>
-    <h4> Controling: 1 player WASD, 2 player WASD and arow keys</h4>
+    <h4> Controling: 1 player W,S; 2 player W,S and arow keys</h4>
     <div class="link-container">
-        <a href="#" id="startButton">Start / Restart</a>
-    </div>
-        <div class="display-container">
-            <input type="text" id="Score" placeholder="Score">
-            </div>
+        <a href="#" id="startButton">Start / Restart</a>    
+        </div>
+    <div class="link-container">
+        <input type="text" id="Score" placeholder="Score">
+        </div>
+    <div class="display-container">
         <canvas id="ca" width="720" height="480" style="background-color: black;"></canvas>
+        <div class="button">
+            <button id="W">W</button>
+            <button id="S">S</button> 
+            </div>
+            </div>
+        
     <script src="pong.js"></script>
     <div class="link-container">
         <a href="Games.html">Gollum's Games</a>

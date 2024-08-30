@@ -1,5 +1,7 @@
 var scorePlayer1 = 0;
 var scorePlayer2 = 0;
+let button1 = 0;
+let button2 = 0;
 
 function setText() {
     var inputFeld = document.getElementById("Score");
@@ -54,6 +56,23 @@ function startGame(isTwoPlayer) {
         requestAnimationFrame(draw);
     }
 
+    document.getElementById('W').addEventListener('mousedown', function() {
+        button1 = 1;
+    });
+    
+    document.getElementById('W').addEventListener('mouseup', function() {
+        button1 = 0;
+    });
+    
+    document.getElementById('S').addEventListener('mousedown', function() {
+        button2 = 1;
+    });
+    
+    document.getElementById('S').addEventListener('mouseup', function() {
+        button2 = 0;
+    });
+    
+
     function loop() {
         if (isTwoPlayer) {
             if (key[38]) { // Up arrow
@@ -73,6 +92,12 @@ function startGame(isTwoPlayer) {
                 p2 = Math.max(p2 - 5, 0);
             }
             if (key[83]) { // S key
+                p2 = Math.min(p2 + 5, 400);
+            }
+            if (button1 === 1) { // W key
+                p2 = Math.max(p2 - 5, 0);
+            }
+            if (button2 === 1) { // S key
                 p2 = Math.min(p2 + 5, 400);
             }
 
