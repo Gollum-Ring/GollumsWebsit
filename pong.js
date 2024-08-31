@@ -26,6 +26,9 @@ function askQuestion() {
 }
 
 function startGame(isTwoPlayer) {
+    scorePlayer1 = 0;
+    scorePlayer2 = 0;
+    setText()
     let ctx = ca.getContext('2d');
     let p1 = 80;
     let p2 = 200;
@@ -47,7 +50,7 @@ function startGame(isTwoPlayer) {
 
     function draw() {
         ctx.clearRect(0, 0, 720, 480); // Clear canvas before drawing
-        ctx.fillStyle = 'white';
+        ctx.fillStyle = 'rgb(240, 240, 240)';
         ctx.fillRect(0, 0, 720, 480);
         ctx.fillStyle = 'rgb(0, 116, 136)';
         ctx.fillRect(10, p1, 10, 80);
