@@ -33,7 +33,7 @@ function startGame(isTwoPlayer) {
     let ball = {
         x: 360,
         y: 240,
-        speedX: 3,
+        speedX: 5,
         speedY: 0
     };
 
@@ -76,29 +76,29 @@ function startGame(isTwoPlayer) {
     function loop() {
         if (isTwoPlayer) {
             if (key[38]) { // Up arrow
-                p2 = Math.max(p2 - 5, 0);
+                p2 = Math.max(p2 - 3, 0);
             }
             if (key[40]) { // Down arrow
-                p2 = Math.min(p2 + 5, 400);
+                p2 = Math.min(p2 + 3, 400);
             }
             if (key[87]) { // W key
-                p1 = Math.max(p1 - 5, 0);
+                p1 = Math.max(p1 - 3, 0);
             }
             if (key[83]) { // S key
-                p1 = Math.min(p1 + 5, 400);
+                p1 = Math.min(p1 + 3, 400);
             }
         } else {
             if (key[87]) { // W key
-                p2 = Math.max(p2 - 5, 0);
+                p2 = Math.max(p2 - 3, 0);
             }
             if (key[83]) { // S key
-                p2 = Math.min(p2 + 5, 400);
+                p2 = Math.min(p2 + 3, 400);
             }
             if (button1 === 1) { // W key
-                p2 = Math.max(p2 - 5, 0);
+                p2 = Math.max(p2 - 3, 0);
             }
             if (button2 === 1) { // S key
-                p2 = Math.min(p2 + 5, 400);
+                p2 = Math.min(p2 + 3, 400);
             }
 
             if (ball.speedX < 0) {
@@ -132,11 +132,11 @@ function startGame(isTwoPlayer) {
         // Ball trifft Schläger
         if (ball.x < 20 || ball.x > 690) {
             if (ball.y > p1 - 10 && ball.y < p1 + 80 && ball.speedX < 0) {
-                ball.speedX = -ball.speedX;
-                ball.speedY = (ball.y - p1 - 40) * 0.1;
+                ball.speedX = -ball.speedX + 1;
+                ball.speedY = (ball.y - p1 - 40) * 0.15;
             } else if (ball.y > p2 - 10 && ball.y < p2 + 80 && ball.speedX > 0) {
                 ball.speedX = -ball.speedX;
-                ball.speedY = (ball.y - p2 - 40) * 0.1;
+                ball.speedY = (ball.y - p2 - 40) * 0.15;
             }
         }
     }

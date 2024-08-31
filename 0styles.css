@@ -1,0 +1,46 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgb(240, 240, 240);
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.headline  {
+    color: rgb(0, 116, 136);
+    font-size: 150%;
+    margin-bottom: 0px;
+}
+a {
+    color: rgb(0, 116, 136);
+    text-decoration: none;
+    margin-left: 16px;
+    font-weight: 700; 
+}
+a:hover {
+    text-decoration: underline;
+}
+h3 {
+    color: rgb(0, 116, 136);
+    text-decoration: none;
+    margin-left: 16px;
+    font-weight: 700;
+}
+h4 {
+    margin-top: 0px;
+}
+.Underpionts{
+    padding-left: 16px;
+}
+.link-container{
+    background-color: rgb(195, 214, 218);
+    color:rgb(0, 116, 136);
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.text-container{
+    background-color: rgb(217, 229, 231);
+    color:rgb(0, 116, 136);
+    padding: 8px;
+    align-items: center;
+}

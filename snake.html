@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake</title>
+    <link rel="icon" type="image/x-icon" href="0IconGollum.ico">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="0styles.css" >
+    <style>
+        .image-container {
+			background-color: rgb(255, 255, 255);
+            width: 480px;
+            padding: 16px;
+			box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
+            border-top: 5px solid rgb(0, 116, 136);
+            border-bottom: 5px solid rgb(0, 116, 136);
+		}
+    </style>
+</head>
+<body>
+    <div class="headline">
+        <h1>Snake</h1>
+    </div>
+    <h4> Eat as much as you can! <br>Controling: arow keys</h4>
+    <div class="link-container">
+        <input type="text" id="Score" placeholder="Score" readonly>
+        </div>
+        <br><br>
+    <div class="image-container">
+        <canvas id="canvas" width="480" height="480"></canvas>
+        </div>
+        <br><br>  
+    <script src="snake.js"></script>
+    <div class="link-container">
+        <a href="Games.html">Gollum's Games</a>
+    </div>
+
+    <audio controls autoplay loop>
+        <source src="pong.mp3">
+        This browser does not support HTML5 Audio
+    </audio>
+    <br><br><br><br><br><br>
+</body>
+</html>
+
+

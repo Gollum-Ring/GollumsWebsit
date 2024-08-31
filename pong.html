@@ -8,38 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="0styles.css">
     <style>
-        body {
-            font-family: 'Open Sans', sans-serif;
-            background-color: rgb(240, 240, 240);
-            padding-left: 40px;
-            padding-right: 40px;
-        }
-        .headline  {
-            color: rgb(0, 116, 136);
-            font-size: 150%;
-            margin-bottom: 0px;
-        }
-        a {
-            color: rgb(0, 116, 136);
-            text-decoration: none;
-            margin-left: 16px;
-            font-weight: 700; 
-        }
-        h4 {
-            margin-top: 0px;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .link-container {
-            background-color: rgb(195, 214, 218);
-            color: rgb(0, 116, 136);
-            padding: 8px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
         .display-container{
             width: 704px;
             padding: 8px;
@@ -47,11 +17,14 @@
             justify-content: space-between;
             align-items: center;
         }
-
         .image-container {
-            background-color: rgb(255, 255, 255);
+			background-color: rgb(255, 255, 255);
+            width: 720px;
             padding: 16px;
-        }
+			box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
+            border-top: 5px solid rgb(0, 116, 136);
+            border-bottom: 5px solid rgb(0, 116, 136);
+		}
         button{
             width: 100px;
             height: 100px;
@@ -82,14 +55,15 @@
     <div class="link-container">
         <input type="text" id="Score" placeholder="Score" readonly>
         </div>
-    <div class="display-container">
+        <br><br>
+    <div class="image-container">
         <canvas id="ca" width="720" height="480" style="background-color: black;"></canvas>
         <div class="button">
             <button id="W">W</button>
             <button id="S">S</button> 
             </div>
             </div>
-        
+            <br><br>
     <script src="pong.js"></script>
     <div class="link-container">
         <a href="Games.html">Gollum's Games</a>
